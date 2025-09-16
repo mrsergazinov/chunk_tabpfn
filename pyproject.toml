@@ -10,6 +10,6 @@ dependencies = [
     "ipykernel>=6.29.5",
     "openml>=0.15.1",
     "seaborn>=0.13.2",
-    "torch==2.6",
+    "torch==2.8.0",
     "tueplots>=0.0.17",
 ]
