@@ -11,6 +11,13 @@ from torch.utils.checkpoint import checkpoint
 
 from tabpfn.model.memory import support_save_peak_mem_factor
 
+# Fix for erro 'HAVE_FLASH_ATTN' is not defined
+try:
+  import flash_attn
+  HAVE_FLASH_ATTN = True
+except ImportError:
+  HAVE_FLASH_ATTN = False
+
 class MultiHeadAttention(torch.nn.Module):
     _input_size: int
     _output_size: int
